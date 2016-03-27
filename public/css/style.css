@@ -1,4 +1,4 @@
-body{margin:0;; padding:0;}
+body{margin:0; padding:0;}
 .nav {
 	height: 40px;
 	background: #a7e0ee;
@@ -40,7 +40,7 @@ a{
 
 .menu {
 	
-	height: 40px;
+	height: 30px;
 	background: #ff9933;
 }
 
@@ -66,3 +66,23 @@ a{
 	color: #fff;
 }
 /* LOGIN NAV end */
+
+.one{
+	
+	border: 1px solid black;
+	width: 100px;
+	padding: 20px 20px;
+}
+
+.two{
+	display: inline-block;
+	border: 1px solid black;
+	width: 100px;
+	
+	padding: 20px 20px;
+}
+
+.inline{
+	padding: 20px;
+	display: inline-block;
+}

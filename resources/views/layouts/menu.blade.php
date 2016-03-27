@@ -1,5 +1,6 @@
 <div class = "nav">
 <ul>
+	<li><a href="{{route('produkt.index')}}">kappa</a></li>
 	<li><a href="{{route('product.index')}}">Books</a></li>
 	<li><a href="{{route('product.create')}}">Sell</a></li>
 	<li><a href="{{route('about')}}">About</a></li>

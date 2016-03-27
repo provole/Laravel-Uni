@@ -27,6 +27,7 @@
 			<tr>
 				<td><a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a></td>
 			<td>{{ $product->price }}</h3></td>
+<img src="{{ asset($product->image) }}" height="150" width="100"/>
 			</tr>
 </table>
 			<br>

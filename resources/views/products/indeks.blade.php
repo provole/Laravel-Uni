@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('title')
-	Kappa
+	Book Store
 @stop
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>  
 @section('body')
@@ -27,29 +27,44 @@
 
 @foreach($products as $i => $product)
 @if($i==1)
-	<table>
-		<tr>
-		<td><a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a></td>
-		<td>{{ $product->price }}</td>
-			<td><img src="{{ asset($product->image) }}" height="150" width="100"/></td>
-	</tr>
-		<br>
-
+<div class="inline">
+<div class="one">
+		<img src="{{ asset($product->image) }}" height="150" width="100"/> <br/>
+		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
+		{{ $product->price }}$
 @endif
-</table>
+	</div>
 	@endforeach
 
+	
 @foreach($products as $i => $product)
 @if($i==2)
-	<table>
-		<tr>
-		<td><a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a></td>
-		<td>{{ $product->price }}</td>
-			<td><img src="{{ asset($product->image) }}" height="150" width="100"/></td>
-	</tr>
-		<br>
+<div class="two">
+		<img src="{{ asset($product->image) }}" height="150" width="100"/>
+		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
+		{{ $product->price }} <Br> <br> <Br> <br> 
+			
+@endif
+</div>
+
+	@endforeach
+	</div>	
+	
+	
+	
+	
+@foreach($products as $i => $product)
+@if($i==3)
+
+		
+		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}
+		{{ $product->price }}$
+			<img src="{{ asset($product->image) }}" height="150" width="100"/>
+	
+
 
 @endif
-</table>
+
+
 	@endforeach
 @stop

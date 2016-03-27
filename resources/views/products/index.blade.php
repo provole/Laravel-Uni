@@ -22,6 +22,7 @@
 @include('layouts.menu')
 
 @foreach($products as $product)
+<div class="inline">
 		<table>
 	
 			<tr>
@@ -31,7 +32,7 @@
 			</tr>
 </table>
 			<br>
-
+</div>
 	@endforeach
 
  @foreach($products as $i => $product)
@@ -45,7 +46,4 @@
 
 
 
-	<a href="{{route('product.create')}}">Create</a>
-	<a href="{{route('about')}}">About</a>
-	<a href="{{route('contact')}}">Contact</a>
 @stop

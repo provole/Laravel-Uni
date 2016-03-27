@@ -23,20 +23,5 @@
 	</div>
 @include('layouts.menu')
 
-	<p>{{$companyName}}</p>
 
-	@if($isUserRegistered == true)
-		<p>Hello mate!</p>
-	@else
-		<p>Please register!</p>
-	@endif
-
-	@for ($i = 0; $i < 10; $i++)
-    	<p>The current value is {{ $i }}</p>
-	@endfor
-
-	@foreach($users as $data)
-		{{$data}}<br>
-	@endforeach
-@stop
 

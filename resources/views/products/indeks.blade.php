@@ -31,7 +31,7 @@
 <div class="one">
 		<img src="{{ asset($product->image) }}" height="150" width="100"/> <br/>
 		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
-		{{ $product->price }}$
+		<div class="bold">£{{ $product->price }}</div>
 @endif
 	</div>
 	@endforeach
@@ -41,8 +41,8 @@
 @if($i==2)
 <div class="two">
 		<img src="{{ asset($product->image) }}" height="150" width="100"/>
-		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
-		{{ $product->price }} <Br> <br> <Br> <br> 
+		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a><br/>
+		<div class="bold">£{{ $product->price }} </div><Br> <br>  <br> 
 			
 @endif
 </div>

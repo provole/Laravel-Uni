@@ -71,20 +71,7 @@ a{
 }
 /* LOGIN NAV end */
 
-.one{
-	
-	border: 1px solid black;
-	width: 100px;
-	padding: 20px 20px;
-}
 
-.two{
-	display: inline-block;
-	border: 1px solid black;
-	width: 100px;
-	
-	padding: 20px 20px;
-}
 
 .inline{
 	width:100px;
@@ -100,9 +87,30 @@ a{
 	display: inline-block;
 	margin-left: 35%;
 	padding: 50px;
+	position: relative;
 	
 }
-.centered{
-	margin-left: 100px;
+.one{
+	
+	border: 1px solid black;
+	width: 100px;
+	padding: 20px 20px;
+	position: relative;
+}
 
+.two{
+	display: inline-block;
+	border: 1px solid black;
+	width: 100px;
+	position: relative;
+	padding: 20px 20px;
+}
+.bold{
+	font-size: 19px;
+	font-weight: bold;
+	color: darkorange;
+	position: absolute;
+	bottom: 0;
+
+	
 }

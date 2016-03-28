@@ -76,15 +76,17 @@ a{
 .inline{
 	width:100px;
 	border: 1px solid black;
-	padding: 10px;
+	padding: 20px 20px;
 	display: inline-block;
 	margin-left: 250px;
-
+	position: relative;
+	
 
 }
 
 .homeinline{
 	display: inline-block;
+	width: 100px;
 	margin-left: 35%;
 	padding: 50px;
 	position: relative;
@@ -111,6 +113,11 @@ a{
 	color: darkorange;
 	position: absolute;
 	bottom: 0;
-
+}
+.bold2{
+	font-size:19px;
+	font-weight: bold;
+	color: darkorange;
+	bottom: 0;
 	
 }

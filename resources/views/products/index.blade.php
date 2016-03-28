@@ -21,14 +21,19 @@
 	</div>
 @include('layouts.menu')
 
+
+
+
+
+
 @foreach($products as $product)
 
 	
 				<div class="inline">
-				
+				<img src="{{ asset($product->image) }}" height="150" width="100"/>
 				<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
-				{{ $product->price }}
-					<img src="{{ asset($product->image) }}" height="150" width="100"/>
+					<div class="bold2">£{{ $product->price }}</div>
+					
 				</div>
 			
 

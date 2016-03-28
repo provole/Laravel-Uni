@@ -15,10 +15,10 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
 	
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::all();
 
+        $products = Product::all();
         return view('products.index')->with('products', $products);
     }
 

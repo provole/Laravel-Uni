@@ -36,7 +36,7 @@ Create new Product
 	{!!Form::text('price', "0$", ['placeholder' => "Give a price"])!!}
 	<br>
 	{!! Form::label('image', 'Choose an image') !!}
-    {!! Form::file('image') !!}
+    {!! Form::file('image', null) !!}
 
 
 	{!!Form::submit('Create')!!}

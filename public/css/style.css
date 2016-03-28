@@ -26,10 +26,14 @@ body{margin:0; padding:0;}
 	color: #fff;
 }
 
+.inline 
 table{
 	border: 1px solid black;
 	padding: 2px 2px;
+	width: 100px;
+	height: 150px;
 }
+
 
 a{
 	text-decoration: none;
@@ -83,6 +87,16 @@ a{
 }
 
 .inline{
-	padding: 20px;
+	width:100px;
+	border: 1px solid black;
+	padding: 10px;
 	display: inline-block;
+	margin-left: 250px;
+
+
+}
+
+.centered{
+	margin-left: 100px;
+
 }

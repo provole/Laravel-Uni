@@ -22,17 +22,17 @@
 @include('layouts.menu')
 
 @foreach($products as $product)
-<div class="inline">
-		<table>
+
 	
-			<tr>
-				<td><a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a></td>
-			<td>{{ $product->price }}</h3></td>
-<img src="{{ asset($product->image) }}" height="150" width="100"/>
-			</tr>
-</table>
-			<br>
-</div>
+				<div class="inline">
+				
+				<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
+				{{ $product->price }}
+					<img src="{{ asset($product->image) }}" height="150" width="100"/>
+				</div>
+			
+
+
 	@endforeach
 
  @foreach($products as $i => $product)

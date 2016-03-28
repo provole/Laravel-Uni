@@ -22,7 +22,7 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-
+	protected $redirectPath = 'produkt';
     /**
      * Create a new authentication controller instance.
      *
@@ -33,7 +33,7 @@ class AuthController extends Controller
 	{
 		Auth::logout();
 		Session::flush();
-		return Redirect::to('home');
+		return Redirect::to('auth/login');
 	}
     public function __construct()
     {

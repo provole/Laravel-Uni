@@ -27,7 +27,7 @@
 
 @foreach($products as $i => $product)
 @if($i==1)
-<div class="inline">
+<div class="homeinline">
 <div class="one">
 		<img src="{{ asset($product->image) }}" height="150" width="100"/> <br/>
 		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
@@ -46,25 +46,9 @@
 			
 @endif
 </div>
-
-	@endforeach
 	</div>	
-	
-	
-	
-	
-@foreach($products as $i => $product)
-@if($i==3)
-
-		
-		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}
-		{{ $product->price }}$
-			<img src="{{ asset($product->image) }}" height="150" width="100"/>
-	
-
-
-@endif
-
-
 	@endforeach
+
+	
+	
 @stop

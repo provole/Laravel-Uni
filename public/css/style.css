@@ -96,6 +96,12 @@ a{
 
 }
 
+.homeinline{
+	display: inline-block;
+	margin-left: 35%;
+	padding: 50px;
+	
+}
 .centered{
 	margin-left: 100px;
 

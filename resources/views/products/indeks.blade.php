@@ -12,10 +12,11 @@
                         <li><a href="/auth/login">Login</a></li>
                         <li><a href="/auth/register">Register</a></li>
                     @else
+	
     <li><a href="#">Hello user</a>
   <li><a href="#">Hello user</a>
     <ul>
-       <li><a href="/auth/logout">Logout</a></li>
+       <li><a href="{{ URL::to('/auth/logout')}}">Logout</a></li>
       
     </ul>
   </li>

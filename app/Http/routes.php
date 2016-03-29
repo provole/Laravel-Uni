@@ -64,6 +64,7 @@ Route::get('home', [
 Route::resource('produkt', 'ProduktController');
 
 
+
 Route::get('create', [
     'as' => 'create',
     'uses' => 'ProductController@getProducts'

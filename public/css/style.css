@@ -1,5 +1,6 @@
-body{margin:0; padding:0;}
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+body{margin:0; padding:0;font-family: "Comic Sans MS", cursive, sans-serif;
+background: url(body-bg.gif);}
+
 
 #cssmenu,
 #cssmenu ul,
@@ -28,11 +29,11 @@ body{margin:0; padding:0;}
 #cssmenu {
   width: auto;
   border-bottom: 3px solid #47c9af;
-  font-family: Raleway, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   line-height: 1;
 }
 #cssmenu ul {
-  background: #ffffff;
+  background: transparent;
   margin-left: 35%;
 }
 #cssmenu > ul > li {
@@ -146,15 +147,15 @@ a{
 /* LOGIN NAV end */
 
 .drob ul {list-style: none;padding: 0px;margin: 0px; }
-  .drob ul li {display: block;position: relative;border:1px solid #000; float: right;}
+  .drob ul li {display: block;position: relative; float: right;}
   .drob li ul {display: none; }
-  .drob ul li a {display: block;background: green;padding: 5px 10px 5px 10px;text-decoration: none;
-           white-space: nowrap;color: #fff; }
-  .drob ul li a:hover {background: #f00; }
+  .drob ul li a {display: block;background: transparent;padding: 5px 10px 5px 10px;text-decoration: none;
+           white-space: nowrap;color: #000; }
+  .drob ul li a:hover {background: silver; }
  .drob  li:hover ul {display: block; position: absolute;}
  .drob  li:hover li {float: none;}
-  .drob li:hover a {background: #f00;}
-  .drob li:hover li a:hover {background: #000;}
+  .drob li:hover a {background: silver;}
+  .drob li:hover li a:hover {background: silver;}
   #drop-nav li ul li {border-top: 0px;}
 .drob #drop-nav{
 

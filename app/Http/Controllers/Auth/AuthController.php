@@ -33,7 +33,7 @@ class AuthController extends Controller
 	{
 		Auth::logout();
 		Session::flush();
-		return Redirect::to('auth/login');
+		 return Redirect::to('login'); //redirect back to login
 	}
     public function __construct()
     {

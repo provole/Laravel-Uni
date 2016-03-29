@@ -135,7 +135,7 @@ a{
 	text-decoration: none;
 	float: right;
 	display: block;
-	padding: 8px 13px;
+	padding: 8px 15px;
 	color: white;
 	margin: 0 auto;
 }
@@ -145,8 +145,21 @@ a{
 }
 /* LOGIN NAV end */
 
+.drob ul {list-style: none;padding: 0px;margin: 0px; }
+  .drob ul li {display: block;position: relative;border:1px solid #000; float: right;}
+  .drob li ul {display: none; }
+  .drob ul li a {display: block;background: green;padding: 5px 10px 5px 10px;text-decoration: none;
+           white-space: nowrap;color: #fff; }
+  .drob ul li a:hover {background: #f00; }
+ .drob  li:hover ul {display: block; position: absolute;}
+ .drob  li:hover li {float: none;}
+  .drob li:hover a {background: #f00;}
+  .drob li:hover li a:hover {background: #000;}
+  #drop-nav li ul li {border-top: 0px;}
+.drob #drop-nav{
 
-
+	background: green;
+}
 .inline{
 	width:100px;
 	border: 1px solid black;

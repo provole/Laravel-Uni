@@ -4,6 +4,8 @@
 @stop
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>  
 @section('body')
+
+
 <div class = "menu">
 <ul>
 	@if (Auth::guest())
@@ -19,6 +21,20 @@
                     @endif
 </ul>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @include('layouts.menu')
 
 

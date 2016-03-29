@@ -31,7 +31,7 @@
 <div class="one">
 		<img src="{{ asset($product->image) }}" height="150" width="100"/> <br/>
 		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
-		<div class="bold">£{{ $product->price }}</div>
+		<div class="bold">£{{ $product->price }}</div><br><br><br><br>
 @endif
 	</div>
 	@endforeach
@@ -46,9 +46,32 @@
 			
 @endif
 </div>
-	</div>	
+	
 	@endforeach
 
+@foreach($products as $i => $product)
+@if($i==3)
+<div class="three">
+		<img src="{{ asset($product->image) }}" height="150" width="100"/>
+		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a><br/>
+		<div class="bold">£{{ $product->price }} </div><Br> <br> 
+			
+@endif
+
+	</div>	
+	</div>	
+	@endforeach	
 	
-	
+	@foreach($products as $i => $product)
+@if($i==4)
+<div class="four">
+		<img src="{{ asset($product->image) }}" height="150" width="100"/>
+		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a><br/>
+		<div class="bold">£{{ $product->price }} </div><Br> <br> <br>
+			
+@endif
+
+	</div>	
+	</div>	
+	@endforeach	
 @stop

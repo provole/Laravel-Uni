@@ -119,7 +119,7 @@ a{
 .menu {
 	
 	height: 30px;
-	background: #ff9933;
+	background: darkorange;
 }
 
 .menu ul {
@@ -135,8 +135,8 @@ a{
 	text-decoration: none;
 	float: right;
 	display: block;
-	padding: 10px 15px;
-	color: black;
+	padding: 8px 13px;
+	color: white;
 	margin: 0 auto;
 }
 

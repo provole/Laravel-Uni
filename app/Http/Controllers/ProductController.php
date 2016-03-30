@@ -9,6 +9,11 @@ use App\Product;
 
 class ProductController extends Controller
 {
+	public function _construct()
+	{
+		$this->middleware('auth', ['only' => 'create']);
+	}
+	
     /**
      * Display a listing of the resource.
      *

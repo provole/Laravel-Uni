@@ -72,12 +72,10 @@ Route::get('create', [
 
 
 
-Route::get('create', function(){
-	if(Auth::guest()){
-		return Redirect::to('auth/login');
-	} else{
-		echo 'Welcome ' . Auth::user()->email . '.';
-	}
-});
+Route::get('create', ['middleware' => 'auth', function(){
 	
+		echo 'Welcome ' . Auth::user()->email . '.';
+	
+}]);
+
 

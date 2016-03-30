@@ -66,7 +66,7 @@
 @endif
 
 	</div>	
-	</div>	
+	
 	@endforeach	
 	
 	@foreach($products as $i => $product)
@@ -77,8 +77,9 @@
 		<div class="bold">£{{ $product->price }} </div><Br> <br> <br>
 			
 @endif
-
+</div>	
 	</div>	
+	
 	</div>	
 	@endforeach	
 	

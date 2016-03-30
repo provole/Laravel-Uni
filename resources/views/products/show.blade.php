@@ -12,8 +12,10 @@
                         <li><a href="/auth/register">Register</a></li>
                     @else
 	
-    <li><a href="#">Hello user</a>
-  <li><a href="#">Hello user</a>
+   
+ <li><a href="#">Hello, @if( Auth::check() )
+	 {{ Auth::user()->name}}
+	@endif</a> 
     <ul>
        <li><a href="{{ URL::to('/auth/logout')}}">Logout</a></li>
       
@@ -24,6 +26,7 @@
 </ul>
 		</div>
 <Br><Br><br>
+
 @include('layouts.menu')
 	{!!Form::open([
 		'method' => 'delete',

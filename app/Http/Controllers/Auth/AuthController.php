@@ -69,10 +69,5 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-	  public function getRegister()
-    {
-        if (Auth::guest())
-            return redirect('/');
-        return view('auth.register');
-    }
+	  
 }

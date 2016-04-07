@@ -35,7 +35,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next)
     {
         if ($this->auth->check()) { //Auth::check
-            return redirect('/home');
+            return redirect('/produkt');
         }
 
         return $next($request);

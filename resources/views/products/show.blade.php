@@ -28,6 +28,10 @@
 <Br><Br><br>
 
 @include('layouts.menu')
+	@if (Auth::guest())
+                        <li><a href="/auth/login">Login</a></li>
+                        <li><a href="/auth/register">Register</a></li>
+                    @else
 	{!!Form::open([
 		'method' => 'delete',
 		'route' => ['product.destroy', $product->id]
@@ -40,4 +44,5 @@
 	<a href="{{route('product.edit', $product->id)}}">Edit</a>
 	{!!Form::submit('Delete')!!}
 	{!!Form::close()!!}
+	@endif
 @stop

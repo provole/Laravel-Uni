@@ -14,8 +14,7 @@ class ProductController extends Controller
        
 
         $this->middleware('auth', ['only' => ['create', 'store']]);
-
-        
+		
     }
 	
     /**

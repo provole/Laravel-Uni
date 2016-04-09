@@ -218,3 +218,9 @@ a{
 	bottom: 0;
 	
 }
+.pagination{
+	background: #fff;
+	border: 1px solid black;
+	display: inline-block;
+	float: left;
+}

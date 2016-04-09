@@ -26,7 +26,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
 
-        $products = Product::all();
+        $products = Product::paginate(3);
         return view('products.index')->with('products', $products);
     }
 

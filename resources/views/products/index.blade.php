@@ -71,5 +71,5 @@
 	@endforeach
 
 
-
+{!!$products->render()!!}
 @stop

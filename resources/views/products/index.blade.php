@@ -61,7 +61,7 @@
 
 	@endforeach
 
-
+{!!$products->render()!!}
 
 <!--
 {!!$products->render()!!} -->

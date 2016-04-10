@@ -28,7 +28,7 @@ class ProductController extends Controller
 
         /*$products = Product::paginate(3);*/
 		
-		$products = Product::all();
+		$products = Product::paginate(3);
 		
 		
 	

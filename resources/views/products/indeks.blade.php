@@ -86,7 +86,7 @@
 	
 	-->
 
-
+<p>The most saled books.</p>
 @foreach($products as $product)
 
 	

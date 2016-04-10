@@ -218,9 +218,34 @@ a{
 	bottom: 0;
 	
 }
+
+
 .pagination{
-	background: #fff;
-	border: 1px solid black;
-	display: inline-block;
-	float: left;
+	margin: 0;
+	padding: 0;
+	margin-left: 35%;
 }
+
+.pagination li{
+	list-style: none;
+	float: left;
+	padding: 20px 20px;
+
+}
+.pagination li a{
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

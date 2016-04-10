@@ -61,15 +61,11 @@
 
 	@endforeach
 
- @foreach($products as $i => $product)
-@if($i==15)
-		<h1><a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a></h1>
-		<h3>{{ $product->price }}</h3>
-		<img src="{{ $product->image }}">
-		<br>
-@endif
-	@endforeach
 
 
-{!!$products->render()!!}
+<!--
+{!!$products->render()!!} -->
+	
+
+	
 @stop

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-
+use DB;
 class PagesController extends Controller
 {
     public function getIndex(){
@@ -12,15 +12,13 @@ class PagesController extends Controller
     }
 
     public function getAbout(){
-		$companyName = "Code Executable Inc";
-		$isUserRegistered = false;
-
-		$users = array("Renato", "Erik", "John", "Samantha");
-
-        return view('pages.about')
-        	->with("companyName", $companyName)
-        	->with("isUserRegistered", $isUserRegistered)
-        	->with("users", $users);
+		
+      
+			
+	return view('pages.about')
+        	
+			
+	
     }
 
     public function getContact(){

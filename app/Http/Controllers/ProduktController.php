@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Product;
-
+use DB;
 class ProduktController extends Controller
 {
     /**
@@ -18,7 +18,10 @@ class ProduktController extends Controller
     public function index()
     {
         $products = Product::all();
-
+	$products = DB::table('products')
+                ->groupBy('sale')
+                ->having('sale', '>', 80)
+                ->get();
         return view('products.indeks')->with('products', $products);
     }
 

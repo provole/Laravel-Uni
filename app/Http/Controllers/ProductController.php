@@ -29,19 +29,13 @@ class ProductController extends Controller
         /*$products = Product::paginate(3);*/
 		
 		$products = Product::all();
-			
-		$products = DB::table('products')
-                ->groupBy('sale')
-                ->having('sale', '>', 80)
-                ->get();
+		
+		
+	
         return view('products.index')->with('products', $products);
 		
 		
     }
-	public function kappa(){
-			$products = Product::all();
-		return view('products.index')->with('products', $products);
-	}
 
     /**
      * Show the form for creating a new resource.

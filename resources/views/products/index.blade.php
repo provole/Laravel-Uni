@@ -19,7 +19,6 @@
 	@endif</a> 
     <ul>
        <li><a href="{{ URL::to('/auth/logout')}}">Logout</a></li>
-      
     </ul>
   </li>
   

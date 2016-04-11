@@ -146,7 +146,7 @@ a{
 }
 /* LOGIN NAV end */
 
-.drob ul {list-style: none;padding: 0px;margin: 0px; }
+.drob ul {list-style: none;padding: 0px;margin: 0px; height: 50px; background: transparent;}
   .drob ul li {display: block;position: relative; float: right;}
   .drob li ul {display: none; }
   .drob ul li a {display: block;background: transparent;padding: 5px 10px 5px 10px;text-decoration: none;
@@ -159,7 +159,7 @@ a{
   #drop-nav li ul li {border-top: 0px;}
 .drob #drop-nav{
 
-	background: green;
+	background: transparent;
 }
 .inline{
 	width:100px;

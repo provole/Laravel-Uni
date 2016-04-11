@@ -1,6 +1,33 @@
+@extends('layouts.layout')
 @extends('layouts.app')
+@section('title')
+	About Us
+@stop
+<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
+@section('body')
+	<div class="drob">
+	<ul id="drop-nav">
+		@if (Auth::guest())
+                        <li><a href="/auth/login">Login</a></li>
+                        <li><a href="/auth/register">Register</a></li>
+                    @else
+	
 
-@section('content')
+ <li><a href="#">Hello, @if( Auth::check() )
+	 {{ Auth::user()->name}}
+	@endif</a> 
+    <ul>
+       <li><a href="{{ URL::to('/auth/logout')}}">Logout</a></li>
+      <li><a href="{{ URL::to('/tasks')}}">Reading</a></li><br/>
+    </ul>
+  </li>
+  
+		@endif
+</ul>
+		</div>
+
+	@include('layouts.menu')
+<Br><Br><br>
     <div class="container">
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">

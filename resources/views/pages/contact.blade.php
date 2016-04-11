@@ -19,7 +19,7 @@
 	@endif</a> 
     <ul>
        <li><a href="{{ URL::to('/auth/logout')}}">Logout</a></li>
-      
+      <li><a href="{{ URL::to('/tasks')}}">Reading</a></li><br/>
     </ul>
   </li>
   

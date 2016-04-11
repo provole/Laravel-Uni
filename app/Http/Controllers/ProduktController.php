@@ -17,7 +17,7 @@ class ProduktController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+      
 	$products = DB::table('products')
                 ->groupBy('sale')
                 ->having('sale', '>', 80)

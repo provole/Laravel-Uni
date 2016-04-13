@@ -32,7 +32,7 @@
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Task
+                    Add a new book
                 </div>
 
                 <div class="panel-body">
@@ -45,7 +45,7 @@
 
                         <!-- Task Name -->
                         <div class="form-group">
-                            <label for="task-name" class="col-sm-3 control-label">Task</label>
+                            <label for="task-name" class="col-sm-3 control-label">Book</label>
 
                             <div class="col-sm-6">
                                 <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
@@ -56,7 +56,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="submit" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>Add Task
+                                    <i class="fa fa-btn fa-plus"></i>Add Book
                                 </button>
                             </div>
                         </div>
@@ -68,13 +68,13 @@
             @if (count($tasks) > 0)
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Current Tasks
+                        Books you want to read.
                     </div>
 
                     <div class="panel-body">
                         <table class="table table-striped task-table">
                             <thead>
-                                <th>Task</th>
+                                <th>Books</th>
                                 <th>&nbsp;</th>
                             </thead>
                             <tbody>

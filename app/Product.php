@@ -18,4 +18,8 @@ class Product extends Model
 	public $timestamps = false;
 
     protected $table = 'products';
+	
+	public function books(){
+		return $this->hasMany('App\Books');
+	}
 }

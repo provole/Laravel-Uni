@@ -18,16 +18,15 @@ class ProduktController extends Controller
     public function index()
     {
       
-	$products = DB::table('products')
+	$products = DB::table('products') /* displays the books which have over 80 sales in the home page... */
                 ->groupBy('sale')
-                ->having('sale', '>', 80)
+                ->having('sale', '>', 80)  /* checks in column 'sale' for books over 80 sales  .*/
                 ->get();
-        return view('products.indeks')->with('products', $products);
+        return view('products.indeks')->with('products', $products); /*  displays in the view.*/
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
+     
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -35,23 +34,13 @@ class ProduktController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
+
     public function show($id)
     {
         //
@@ -70,22 +59,14 @@ class ProduktController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+  
      */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function destroy($id)
     {
         //

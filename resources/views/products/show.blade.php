@@ -12,7 +12,7 @@
                         <li><a href="/auth/register">Register</a></li>
                     @else
 	
-   
+   <!-- DISPLAYS USER NAME IF LOGGED IN. --> 
  <li><a href="#">Hello, @if( Auth::check() )
 	 {{ Auth::user()->name}}
 	@endif</a> 

@@ -28,42 +28,25 @@ class ProductController extends Controller
 
         /*$products = Product::paginate(3);*/
 		
-		$products = Product::paginate(6);
+		$products = Product::paginate(6); /* splits products to only 6 in a page.*/ 
 		
 		
 	
-        return view('products.index')->with('products', $products);
+        return view('products.index')->with('products', $products);  /*  returns view with products..*/
 		
 		
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ /* CRUD -  create */ 
     public function create()
     {
 		
         return view('products.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(Request $request)   
     {
-        /*
-        $product = new Product;
-        $product->name = $request->name;
-        $product->price = $request->price;
-		$product->descr = $request->descr;
-		$product->descr = $request->image;
-        $product->save();
-        */
+     
         $inputs = $request->all();
 
         $product = Product::Create($inputs);
@@ -72,40 +55,24 @@ class ProductController extends Controller
         //return redirect()->route('product.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+ /* displays page with product id */ 
+    public function show($id) 
     {
         $product = Product::find($id);
 
-        return view('products.show')->with('product', $product);
+        return view('products.show')->with('product', $product);  /* passing product to the view in order to use it.  */
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+ /* CRUD -  update */ 
     public function edit($id)
     {
-        $product = Product::find($id);
+        $product = Product::find($id);  /* retrieve product, finding ID */
 
         return view('products.edit', compact('product', $product));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function update(Request $request, $id)  /*  product is the model. The model connects directly to products table inside the database*/
     {
         $product = Product::find($id);
 
@@ -113,21 +80,18 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->save();
 
-        return redirect()->route('product.index');
+        return redirect()->route('product.index'); /*  redirect to index after editing a product.*/
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+	/*  CRUD - DELETE*/
+ 
     public function destroy($id)
     {
         //Product::destroy($id);
-        $product = Product::find($id)
+        $product = Product::find($id)  /* retrieve model, passing id and deleting. */
             ->delete();
 
-        return redirect()->route('product.index');
+        return redirect()->route('product.index');   /*  redirect to index after deleting a product.*/
+	/*  CRUD - DELETE*/
     }
 }

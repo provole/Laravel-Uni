@@ -22,9 +22,9 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 use App\Task;
 use Illuminate\Http\Request;
 
-
+/* These are the Reading-list routes */
     /**
-     * Show Task Dashboard
+     * Show Book Dashboard
      */
     Route::get('/tasks', function () {
         return view('tasks', [
@@ -33,7 +33,7 @@ use Illuminate\Http\Request;
     });
 
     /**
-     * Add New Task
+     * Add New Book
      */
     Route::post('/task', function (Request $request) {
         $validator = Validator::make($request->all(), [
@@ -54,7 +54,7 @@ use Illuminate\Http\Request;
     });
 
     /**
-     * Delete Task
+     * Delete Book
      */
     Route::delete('/task/{id}', function ($id) {
         Task::findOrFail($id)->delete();
@@ -62,12 +62,12 @@ use Illuminate\Http\Request;
         return redirect('/tasks');
     });
 
+/* END OF READING LIST */
 
 
+ 
 
-
-
-
+/* PAGES CONTROLLER*/
 Route::get('/', [
     'as' => '/',
     'uses' => 'PagesController@getIndex'
@@ -75,40 +75,33 @@ Route::get('/', [
 
 
 
-Route::get('about', [
+Route::get('about', [   /* route for about page*/
     'as' => 'about',
     'uses' => 'PagesController@getAbout'
 ]);
 
-Route::get('contact', [
+Route::get('contact', [ /* route for contact page*/
     'as' => 'contact',
     'uses' => 'PagesController@getContact'
 ]);
-
-Route::resource('product', 'ProductController');
-
-
-
-Route::get('/home', 'PagesController@home');
-
-
-
-Route::get('home', [
+Route::get('home', [   /* route for home page*/
     'as' => 'home',
     'uses' => 'PagesController@getHome'
 ]);
-// Route::get('home', ['middleware' => 'auth', function(){
 
-	//echo 'Welcome home ' . Auth::user()->email . '.';
-	
-//}]);
+Route::get('/home', 'PagesController@home');
+/* END OF PAGES CONTROLLER*/
 
 
+
+
+
+Route::resource('product', 'ProductController');
 Route::resource('produkt', 'ProduktController');
 
 
 
-Route::get('create', [
+Route::get('create', [     /* route for create*/
     'as' => 'create',
     'uses' => 'ProductController@getProducts'
 ]);

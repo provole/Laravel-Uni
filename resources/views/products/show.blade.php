@@ -40,9 +40,14 @@
 	<h4>{{$product->descr}}</h4>
 	<h3>{{$product->price}}</h3>
 	<img src="{{ asset($product->image) }}" height="150" width="100"/>
-
+	
+@if(Auth::id() == $product->user_id)
 	<a href="{{route('product.edit', $product->id)}}">Edit</a>
+	@endif
+	
+	@if(Auth::id() == $product->user_id)
 	{!!Form::submit('Delete')!!}
+	@endif
 	{!!Form::close()!!}
 	@endif
 @stop

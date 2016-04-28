@@ -27,8 +27,11 @@
 		@endif
 </ul>
 		</div>
-<Br><Br><br>
-@include('layouts.menu')
 
+<Br><Br><br>
+
+
+@include('layouts.menu')
+<p>Welcome to the Book store. Here you can see a wide range books as well as sell your own.</p>
 
 

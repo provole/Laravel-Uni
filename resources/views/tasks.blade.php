@@ -82,7 +82,7 @@
                                     <tr>
                                         <td class="table-text"><div>{{ $task->name }}</div></td>
 
-                                        <!-- Task Delete Button -->
+                                        <!-- Book Delete Button -->
                                         <td>
                                             <form action="/task/{{ $task->id }}" method="POST">
                                                 {{ csrf_field() }}

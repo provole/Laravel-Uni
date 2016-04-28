@@ -20,6 +20,7 @@ Create new Product
  <!-- displays nav if logged in + display user's name-->
    <li><a href="#">Hello, @if( Auth::check() )
 	 {{ Auth::user()->name}}
+
 	@endif</a> 
     <ul>
        <li><a href="{{ URL::to('/auth/logout')}}">Logout</a></li>
@@ -28,6 +29,10 @@ Create new Product
   </li>
   
 		@endif
+		<form action="someaction" method="POST">
+    <input type="hidden" name="user_id" value="{{Auth::id()}}"/>
+    <input type="text" name="product_name" />
+</form>
 </ul>
 		</div>
 <Br><Br><br>
@@ -35,7 +40,7 @@ Create new Product
 	@include('layouts.menu')
 
 	{!!Form::open(['route' => 'product.store'])!!} <!-- Form open for sales page. -->
-
+	{!! Form::hidden('user_id', Auth::id()) !!}
 	{!!Form::label('name', 'Name')!!}
 	{!!Form::text('name', null, ['placeholder' => "Name of book"])!!} <!-- Name field-->
 

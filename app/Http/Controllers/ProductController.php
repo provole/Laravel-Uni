@@ -51,6 +51,7 @@ class ProductController extends Controller
         $product = Product::Create($inputs);
 
         return redirect()->action('ProductController@index');
+        
         //return redirect()->route('product.index');
     }
 

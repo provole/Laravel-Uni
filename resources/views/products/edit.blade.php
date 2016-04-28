@@ -27,7 +27,8 @@ Edit {{$product->name}}
 		</div>
 <Br><Br><br>
 @include('layouts.menu')  
-	{!!Form::model($product, [  <!-- form for edit -->
+ <!-- form for edit -->
+	{!!Form::model($product, [ 
 		'method' => 'patch',
 		'route' => ['product.update', $product->id]
 	])!!}

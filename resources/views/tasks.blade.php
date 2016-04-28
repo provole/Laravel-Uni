@@ -28,6 +28,7 @@
 
 	@include('layouts.menu')
 <Br><Br><br>
+<P align="center">Add books you wish to read someday.</P>
     <div class="container">
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">

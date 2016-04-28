@@ -39,7 +39,6 @@ class ProductController extends Controller
  /* CRUD -  create */ 
     public function create()
     {
-		
         return view('products.create');
     }
 

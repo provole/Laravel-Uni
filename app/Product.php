@@ -11,14 +11,17 @@ class Product extends Model
 		'price',
 		'descr',
 		'image',
-		'sale'
+		'sale',
+		'user_id'
 	
 	];
 
 	public $timestamps = false;
 
     protected $table = 'products';
-	
+	public function products(){
+		return $this->belongsTo('App\Product', 'user_id');
+	}
 	public function books(){
 		return $this->hasMany('App\Books');
 	}

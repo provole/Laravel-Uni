@@ -1,3 +1,4 @@
+ <!-- specific product ID page -->
 @extends('layouts.layout')
 @section('title')
 {{$product->name}}
@@ -7,12 +8,13 @@
 		
 	<div class="drob">
 	<ul id="drop-nav">
+	 <!-- display nav if user not logged in-->
 		@if (Auth::guest())
                         <li><a href="/auth/login">Login</a></li>
                         <li><a href="/auth/register">Register</a></li>
                     @else
 	
-   <!-- DISPLAYS USER NAME IF LOGGED IN. --> 
+   <!-- display nav if user logged in + user's name -->
  <li><a href="#">Hello, @if( Auth::check() )
 	 {{ Auth::user()->name}}
 	@endif</a> 
@@ -28,11 +30,13 @@
 <Br><Br><br>
 
 @include('layouts.menu')
-	@if (Auth::guest())
+	@if (Auth::guest())  <!-- restrict access to id page if user not logged in -->
                         <li><a href="/auth/login">Login</a></li>
                         <li><a href="/auth/register">Register</a></li>
+       
                     @else
-	{!!Form::open([
+                     <!-- restrict access only if product id===user -->
+	{!!Form::open([ 
 		'method' => 'delete',
 		'route' => ['product.destroy', $product->id]
 	])!!}
@@ -40,14 +44,14 @@
 	<h4>{{$product->descr}}</h4>
 	<h3>{{$product->price}}</h3>
 	<img src="{{ asset($product->image) }}" height="150" width="100"/>
-
+	 <!-- edit only if product id=== user  -->
 	@if(Auth::id() == $product->user_id)
 	<a href="{{route('product.edit', $product->id)}}">Edit</a>
 	@endif
 	
-	@if(Auth::id() == $product->user_id)
-	{!!Form::submit('Delete')!!}
+	@if(Auth::id() == $product->user_id)  <!-- delete only if product id === user -->
+	{!!Form::submit('Delete')!!}  <!-- destroy item -->
 	@endif
-	{!!Form::close()!!}
+	{!!Form::close()!!}  <!-- closing form -->
 	@endif
 @stop

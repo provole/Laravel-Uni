@@ -4,7 +4,7 @@ Edit {{$product->name}}
 @stop
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
 @section('body')
-		
+		<!-- displays nav if not logged in -->
 	<div class="drob">
 	<ul id="drop-nav">
 		@if (Auth::guest())
@@ -12,7 +12,7 @@ Edit {{$product->name}}
                         <li><a href="/auth/register">Register</a></li>
                     @else
 	
-     <!-- DISPLAYS USER NAME IF LOGGED IN. -->
+     <!-- displays nav if logged in + user's name -->
  <li><a href="#">Hello, @if( Auth::check() )
 	 {{ Auth::user()->name}}
 	@endif</a> 
@@ -26,20 +26,20 @@ Edit {{$product->name}}
 </ul>
 		</div>
 <Br><Br><br>
-@include('layouts.menu')
-	{!!Form::model($product, [
+@include('layouts.menu')  
+	{!!Form::model($product, [  <!-- form for edit -->
 		'method' => 'patch',
 		'route' => ['product.update', $product->id]
 	])!!}
 	
-	{!!Form::label('name', 'Name')!!}
-	{!!Form::text('name', $product->name, ['placeholder' => "Give a name"])!!}
+	{!!Form::label('name', 'Name')!!}  <!-- edit name-->
+	{!!Form::text('name', $product->name, ['placeholder' => "Name"])!!}
 
 	<br>
 
-	{!!Form::label('price', 'Price')!!}
-	{!!Form::text('price', $product->price, ['placeholder' => "Give a price"])!!}
+	{!!Form::label('price', 'Price')!!} <!-- edit price -->
+	{!!Form::text('price', $product->price, ['placeholder' => "Price"])!!}
 
-	{!!Form::submit('Edit')!!}
-	{!!Form::close()!!}
+	{!!Form::submit('Edit')!!}  <!-- edit product id -->
+	{!!Form::close()!!}  <!--closing form -->
 @stop

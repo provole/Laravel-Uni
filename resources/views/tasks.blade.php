@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout')    <!-- READING PAGE-->
 @extends('layouts.app')
 @section('title')
 	About Us

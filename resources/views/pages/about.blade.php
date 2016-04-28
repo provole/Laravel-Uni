@@ -1,3 +1,4 @@
+ <!-- simple about page-->
 @extends('layouts.layout')
 
 @section('title')
@@ -9,12 +10,13 @@
 		
 	<div class="drob">
 	<ul id="drop-nav">
+	 <!-- if user is not logged in display this nav-->
 		@if (Auth::guest())
                         <li><a href="/auth/login">Login</a></li>
                         <li><a href="/auth/register">Register</a></li>
                     @else
 	
-  <!-- DISPLAYS USER NAME IF LOGGED IN. -->
+   <!-- display this nav if user logged in + user's name -->
  <li><a href="#">Hello, @if( Auth::check() )
 	 {{ Auth::user()->name}}
 	@endif</a> 
@@ -31,7 +33,7 @@
 <Br><Br><br>
 
 
-@include('layouts.menu')
+@include('layouts.menu')  <!-- about description-->
 <p>Welcome to the Book store. Here you can see a wide range books as well as sell your own.</p>
 
 

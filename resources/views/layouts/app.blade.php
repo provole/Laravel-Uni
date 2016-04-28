@@ -1,3 +1,4 @@
+ <!-- this is the layout for reading page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

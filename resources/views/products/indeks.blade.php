@@ -1,3 +1,5 @@
+ <!-- THIS IS THE HOME PAGE! -->
+
 @extends('layouts.layout')
 @section('title')
 	Book Store
@@ -8,12 +10,13 @@
 		
 	<div class="drob">
 	<ul id="drop-nav">
+	 <!-- display nav if user is not logged in-->
 		@if (Auth::guest())
                         <li><a href="/auth/login">Login</a></li>
                         <li><a href="/auth/register">Register</a></li>
                     @else
 	
-     <!-- DISPLAYS USER NAME IF LOGGED IN. -->
+      <!-- display nav if user logged in + user's name -->
   <li><a href="#">Hello, @if( Auth::check() )
 	 {{ Auth::user()->name}}
 	@endif</a> 
@@ -25,7 +28,7 @@
   </li>
   
 		@endif
-</ul>
+	</ul>
 		</div>
 <Br><Br><br>
 
@@ -33,67 +36,15 @@
 
 
 
-<!--
-@foreach($products as $i => $product)
-@if($i==1)
-<div class="homeinline">
-<div class="one">
-		<img src="{{ asset($product->image) }}" height="150" width="100"/> <br/>
-		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
-		<div class="bold">£{{ $product->price }}</div><br><br><br><br>
-@endif
-	</div>
-	@endforeach
+
+ <!-- Home page/ display the bestsellers-->
+<p>Bestsellers.</p>
+@foreach($products as $product)  <!-- display books-->
 
 	
-@foreach($products as $i => $product)
-@if($i==2)
-<div class="two">
-		<img src="{{ asset($product->image) }}" height="150" width="100"/>
-		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a><br/>
-		<div class="bold">£{{ $product->price }} </div><Br> <br>  <br> 
-			
-@endif
-</div>
-	
-	@endforeach
-
-@foreach($products as $i => $product)
-@if($i==3)
-<div class="three">
-		<img src="{{ asset($product->image) }}" height="150" width="100"/>
-		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a><br/>
-		<div class="bold">£{{ $product->price }} </div><Br> <br> 
-			
-@endif
-
-	</div>	
-	
-	@endforeach	
-	
-	@foreach($products as $i => $product)
-@if($i==4)
-<div class="four">
-		<img src="{{ asset($product->image) }}" height="150" width="100"/>
-		<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a><br/>
-		<div class="bold">£{{ $product->price }} </div><Br> <br> <br>
-			
-@endif
-</div>	
-	</div>	
-	
-	</div>	
-	@endforeach	
-	
-	-->
-
-<p>The most saled books.</p>
-@foreach($products as $product)
-
-	
-				<div class="inline">
-				<img src="{{ asset($product->image) }}" height="150" width="100"/>
-				<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
+				<div class="inline">  <!-- css styling/ not important -->
+				<img src="{{ asset($product->image) }}" height="150" width="100"/>  <!-- product image -->
+				<a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>  <!-- product name + url to specific product id-->
 					<div class="bold2">£{{ $product->price }}</div>
 					
 				</div>

@@ -1,4 +1,4 @@
-<div id = "cssmenu">
+<div id = "cssmenu">  <!-- main navigation -->
 <ul>
 	<li><a href="{{route('produkt.index')}}">Home</a></li>
 	<li><a href="{{route('product.index')}}">Books</a></li>

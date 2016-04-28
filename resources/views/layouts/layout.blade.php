@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>    <!-- layout for the structure of the html document-->
 <html>
 <head>
 	<title>@yield('title')</title>

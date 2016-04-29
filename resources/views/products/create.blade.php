@@ -29,9 +29,7 @@ Create new Product
   </li>
   
 		@endif
-		<form action="someaction" method="POST">
-    <input type="hidden" name="user_id" value="{{Auth::id()}}"/>
-    <input type="text" name="product_name" />
+		
 </form>
 </ul>
 		</div>
@@ -40,7 +38,7 @@ Create new Product
 	@include('layouts.menu')
 
 	{!!Form::open(['route' => 'product.store'])!!} <!-- Form open for sales page. -->
-	{!! Form::hidden('user_id', Auth::id()) !!}
+	{!! Form::hidden('user_id', Auth::id()) !!}  <!-- input user_id -->
 	{!!Form::label('name', 'Name')!!}
 	{!!Form::text('name', null, ['placeholder' => "Name of book"])!!} <!-- Name field-->
 
